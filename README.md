@@ -1,8 +1,8 @@
 **Welcome to Social Pay!**\
 Manage and Trade Your Social Assets!\
 
-https://social-pay-1.herokuapp.com\
-https://socialpay.live\
+https://social-pay-1.herokuapp.com \
+https://socialpay.live \
 
 **Authors**: Rithesh Rajaskar, Sohum Rao, John Zhou, and Fardeen Khimani\
 
