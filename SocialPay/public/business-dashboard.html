@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>EduWell - Education HTML5 Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<!--
+
+TemplateMo 573 EduWell
+
+https://templatemo.com/tm-573-eduwell
+
+-->
+  </head>
+
+<body>
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+              <nav class="main-nav">
+                <!-- ***** Logo Start ***** -->
+                <a href="index.html" class="logo">
+                    <img src="assets/images/templatemo-eduwell.png" height=50px alt="EduWell Template">
+                </a>
+                <!-- ***** Logo End ***** -->
+                <!-- ***** Menu Start ***** -->
+                <ul class="nav">
+                  <li><a href="/" class="active">Home</a></li>
+                  <li><a href="/business">Dashboard</a></li>
+                  <li><a href="/login" class="logoutBtn">Logout</a></li>
+                </ul>      
+                <a class='menu-trigger'>
+                    <span>Menu</span>
+                </a>
+                <!-- ***** Menu End ***** -->
+              </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+  <section class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="header-text">
+          <h1 id="businessWelcome"></h1>
+          <div>
+            <a href="create-transaction.html" class="btn btn-info" role="button">Create Transaction</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- View Wallet/ Transactions area -->
+
+
+<main class="content">
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col-12 col-md-6 col-xxl-4 d-flex order-2 order-xxl-2">
+        <div class="card flex-fill w-100">
+          <div class="card-header">
+            <h5 class="card-title mb-0">Overview</h5>
+          </div>
+          <div class="card-body d-flex">
+            <div class="align-self-center w-100">
+              <div class="py-3">
+                <div class="chart chart-xs">
+                  <canvas id="chartjs-dashboard-pie"></canvas>
+                </div>
+              </div>
+              <table class="table mb-0">
+                <tbody>
+                  <tr>
+                    <td>Complete</td>
+                    <td class="text-end" id="completeTotal">8</td>
+                  </tr>
+                  <tr>
+                    <td>Pending</td>
+                    <td class="text-end" id="pendingTotal">4</td>
+                  </tr>
+                  <tr>
+                    <td>Awaiting Approval</td>
+                    <td class="text-end" id="awTotal">21</td>
+                  </tr>
+                  <tr>
+                    <td>Cancelled</td>
+                    <td class="text-end" id="cancelledTotal">2</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-12 col-xxl-4 d-flex order-3 order-xxl-3">
+        <div class="card flex-fill">
+          <div class="card-header">
+            <h5 class="card-title mb-0">Weekly Analytics</h5>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title mb-0">Invested</h5>
+            <h1 class="mt-1 mb-0">$21.30</h1>
+            <div class="mb-4">
+              <span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 6.65% </span>
+              <span class="text-muted">Since last week</span>
+            </div>
+            <h5 class="card-title mb-0">Transactions</h5>
+            <h1 class="mt-1 mb-0">6</h1>
+            <div class="mb-4">
+              <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -2</span>
+              <span class="text-muted">Since last week</span>
+            </div>
+            <h5 class="card-title mb-0">Click Rate</h5>
+            <h1 class="mt-1 mb-0">14.212</h1>
+            <div class="mb-4">
+              <span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 5.25% </span>
+              <span class="text-muted">Since last week</span>
+            </div>
+            <h5 class="card-title mb-0">Conversion Rate</h5>
+            <h1 class="mt-1 mb-0">2.382</h1>
+            <div class="mb-4">
+              <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
+              <span class="text-muted">Since last week</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xxl-4 d-flex order-1 order-xxl-1">
+        <div class="card flex-fill">
+          <div class="card-header">
+            <h5 class="card-title mb-0"></h5>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title mb-0">Wallet</h5>
+            <h1 class="mt-1 mb-0" id="wallet"></h1>
+            <div class="mb-4">
+              
+            </div>
+            <h5 class="card-title mb-0">Total Transations</h5>
+            <h1 class="mt-1 mb-0" id="totalTransactions">202</h1>
+            <div class="mb-4">
+              
+            </div>
+            <h5 class="card-title mb-0">Total Amount Invested</h5>
+            <h1 class="mt-1 mb-0" id="invested"></h1>
+            <div class="mb-4">
+              
+            </div>
+            <h5 class="card-title mb-0">Total Unique Creators</h5>
+            <h1 class="mt-1 mb-0" id="uniqueCreators"></h1>
+            <div class="mb-4">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Transcation Tables  -->
+    <div class="row">
+      <div class="col-12 col-lg-12 col-xxl-12 d-flex">
+        <div class="card flex-fill">
+          <div class="card-header">
+            <h5 class="card-title mb-0 " >Transaction History</h5>
+          </div>
+          <table class="table table-hover my-0">
+            <thead>
+              <tr>
+                <th>Creator Name</th>
+                <th class="d-none d-xl-table-cell">Start Date</th>
+                <th class="d-none d-xl-table-cell">Expiry Date</th>
+                <th>Status</th>
+                <th class="d-none d-md-table-cell">Amount</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody id="transactionTable">
+              
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+        //according to loftblog tut
+        //console.log(completeCounter);
+        //console.log('here')
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+     <script
+     src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+     integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"></script>
+   <script src="assets/js/businessDash.js"></script>
+   <!----custom pie chart---->
+   <!-- <script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Pie chart
+			new Chart(document.getElementById("chartjs-dashboard-pie"), {
+				type: "pie",
+				data: {
+					labels: ["Complete",  "Pending", "Awaiting Approval", "Cancelled"],
+					datasets: [{
+						data: [8, 4, 16, 2],
+						backgroundColor: [
+							window.theme.success,
+							window.theme.warning,
+              window.theme.gray,
+              window.theme.danger
+						],
+						borderWidth: 5
+					}]
+				},
+				options: {
+					responsive: !window.MSInputMethodContext,
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					cutoutPercentage: 75
+				}
+			});
+		});
+	</script> -->
+  <!-- <script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var markers = [{
+					coords: [31.230391, 121.473701],
+					name: "Shanghai"
+				},
+				{
+					coords: [28.704060, 77.102493],
+					name: "Delhi"
+				},
+				{
+					coords: [6.524379, 3.379206],
+					name: "Lagos"
+				},
+				{
+					coords: [35.689487, 139.691711],
+					name: "Tokyo"
+				},
+				{
+					coords: [23.129110, 113.264381],
+					name: "Guangzhou"
+				},
+				{
+					coords: [40.7127837, -74.0059413],
+					name: "New York"
+				},
+				{
+					coords: [34.052235, -118.243683],
+					name: "Los Angeles"
+				},
+				{
+					coords: [41.878113, -87.629799],
+					name: "Chicago"
+				},
+				{
+					coords: [51.507351, -0.127758],
+					name: "London"
+				},
+				{
+					coords: [40.416775, -3.703790],
+					name: "Madrid "
+				}
+			];
+			var map = new jsVectorMap({
+				map: "world",
+				selector: "#world_map",
+				zoomButtons: true,
+				markers: markers,
+				markerStyle: {
+					initial: {
+						r: 9,
+						strokeWidth: 7,
+						stokeOpacity: .4,
+						fill: window.theme.primary
+					},
+					hover: {
+						fill: window.theme.primary,
+						stroke: window.theme.primary
+					}
+				},
+				zoomOnScroll: false
+			});
+			window.addEventListener("resize", () => {
+				map.updateSize();
+			});
+		});
+	</script> -->
+  <!-- <script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Bar chart
+			new Chart(document.getElementById("chartjs-dashboard-bar"), {
+				type: "bar",
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "This year",
+						backgroundColor: window.theme.primary,
+						borderColor: window.theme.primary,
+						hoverBackgroundColor: window.theme.primary,
+						hoverBorderColor: window.theme.primary,
+						data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+						barPercentage: .75,
+						categoryPercentage: .5
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					scales: {
+						yAxes: [{
+							gridLines: {
+								display: false
+							},
+							stacked: false,
+							ticks: {
+								stepSize: 20
+							}
+						}],
+						xAxes: [{
+							stacked: false,
+							gridLines: {
+								color: "transparent"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script> -->
+       <script
+       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+       integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+       crossorigin="anonymous"
+       referrerpolicy="no-referrer"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src="assets/js/businessDash.js"></script>
+     
+</body>
+</html>

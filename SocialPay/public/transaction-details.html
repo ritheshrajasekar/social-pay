@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    
+        <title>EduWell - Education HTML5 Template</title>
+    
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+        <!-- Additional CSS Files -->
+        <link rel="stylesheet" href="assets/css/fontawesome.css">
+        <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
+        <link rel="stylesheet" href="assets/css/owl.css">
+        <link rel="stylesheet" href="assets/css/lightbox.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+
+    <!--
+    
+    TemplateMo 573 EduWell
+    
+    https://templatemo.com/tm-573-eduwell
+    
+    -->
+    </head>
+<body>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+              <nav class="main-nav">
+                <!-- ***** Logo Start ***** -->
+                <a href="index.html" class="logo">
+                    <img src="assets/images/templatemo-eduwell.png" height=50px alt="EduWell Template">
+                </a>
+                <!-- ***** Logo End ***** -->
+                <!-- ***** Menu Start ***** -->
+                <ul class="nav">
+                  <li><a href="/" class="active">Home</a></li>
+                  <li><a href="business-dashboard.html" id='pickDashboard'>Dashboard</a></li>
+                  <li><a href="/login" class="logoutBtn">Logout</a></li>
+                </ul>      
+                <a class='menu-trigger'>
+                    <span>Menu</span>
+                </a>
+                <!-- ***** Menu End ***** -->
+              </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <section class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="header-text">
+            <h4></h4>
+            <h1>Transaction Details</h1>
+            <div>
+                <button type="button" class="btn btn-primary btn-sm" id='createDispute'>Create Dispute</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  
+
+
+<main class="content">
+    <div class="container-fluid p-0">
+        <div class="row justify-content-center">
+            <div class="col-lg-6" id='disputePDF'>
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0 ">Terms of Agreement</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="description"></div>
+                    </div>
+                    <hr class="my-0" />
+                    <div class="card-body">
+                        <h5 class="h6 card-title">Transaction status</h5>
+                        <div id="status"></div>
+                        <div id="approvedDate"></div>
+                        <div id="linkProof"></div>
+                        
+                        <div id="creatorDescription"></div>
+                    </div>
+                    <hr class="my-0" />
+                    <div class="card-body">
+                        <h5 class="h6 card-title">Valid Until</h5>
+                        <div id="validuntil">
+                            
+                        </div>
+                    </div>
+                    <hr class="my-0" />
+                    <div class="card-body">
+                        <h5 class="h6 card-title">About</h5>
+                        <div id="creatorName"></div>
+                        <div id="businessName"></div>
+                        <div id="tid"></div>
+                         <div id="date"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script
+     src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+     integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"></script>
+     
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="assets/js/transaction-details.js"></script>
+  
+  
+
+
+</body>
+</html>>
