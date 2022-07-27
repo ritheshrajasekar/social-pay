@@ -2,7 +2,7 @@ const {creatorModel} = require('../db/creatorModel')
 const {businessModel} = require('../db/businessModel')
 const {createCustomError} = require('../error/customError')
 const jwt = require('jsonwebtoken')
-const JWT_SECRET = 'helloworld'
+const JWT_SECRET = process.env.JWT_SECRET || 'helloworld'
 
 const authMiddleware = async (req, res, next) => {
     let authHeader = req.headers.authorization

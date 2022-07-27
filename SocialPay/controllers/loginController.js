@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken')
 const path = require('path');
 
 //change to environment var later
-const JWT_SECRET = 'helloworld'
+const JWT_SECRET = process.env.JWT_SECRET || 'helloworld'
 
 const login = async (req, res) => {
     const creator = await creatorModel.findOne({ userName: req.body.userName, password: req.body.password })
