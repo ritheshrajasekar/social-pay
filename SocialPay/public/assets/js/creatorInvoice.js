@@ -30,7 +30,13 @@ try {
     document.getElementById("description").innerHTML = ""+data.transaction.businessDescription;
     document.getElementById("validuntil").innerHTML = `This contract is valid until ` + data.transaction.expiryDate.substring(0, 10) +  ` for the amount of $` + dollarUSLocale.format(data.transaction.amount);
     document.getElementById("date").innerHTML = "Transaction Date: " + data.transaction.initialDate.substring(0, 10);
+
+
+    console.log(("Category: " + data.transaction.category.charAt(0) + data.transaction.category.substring(1).toLowerCase()))
     
+    document.getElementById('categoryDetail').innerHTML = ("Category: " + data.transaction.category.charAt(0) + data.transaction.category.substring(1).toLowerCase())
+    document.getElementById('platformDetail').innerHTML = "Platform: " + data.transaction.platform.charAt(0) + data.transaction.platform.substring(1).toLowerCase()
+
     document.getElementById('complete').addEventListener('click', async (e) => {
         e.preventDefault();
 
@@ -79,7 +85,9 @@ try {
             return;
         }
 
-        const {data1} = await axios.patch(`/transaction/update/${data.transaction._id}`, {status: 'COMPLETE', urlProof: creatorLink, creatorDescription: descrip}, {
+        const randomEngagement = (Math.random() * 12) + 4
+        console.log(randomEngagement)
+        const {data1} = await axios.patch(`/transaction/update/${data.transaction._id}`, {status: 'COMPLETE', urlProof: creatorLink, creatorDescription: descrip, engagementRate: randomEngagement}, {
             headers: {
                 Authorization: `Bearer ${sessionStorage.getItem('token')}`,
             },

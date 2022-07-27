@@ -38,6 +38,9 @@ try {
 
     document.querySelector('#pickDashboard').setAttribute("href", `/${data.type}`);
     
+    document.getElementById('categoryDetail').innerHTML = "Category: " + data.transaction.category.charAt(0) + data.transaction.category.substring(1).toLowerCase()
+    document.getElementById('platformDetail').innerHTML = "Platform: " + data.transaction.platform.charAt(0) + data.transaction.platform.substring(1).toLowerCase()
+
     if (data.transaction.status == 'COMPLETE') {
       document.getElementById("linkProof").innerHTML = "Link Proof: " + data.transaction.urlProof;
       document.getElementById("approvedDate").innerHTML = "Completed Date: " + data.transaction.approvedDate.substring(0,10);

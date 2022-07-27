@@ -62,10 +62,31 @@ document.querySelector('.validate-form').addEventListener('submit', async (e) =>
             amountError.classList.add('alert-validate');
             return;
         }
-        console.log("jere");
+        
+        const category = document.querySelector('#categorySelect').value
+        const platform = document.querySelector('#platformSelect').value
+        if (category == 'DEFAULT' || platform == 'DEFAULT') {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 1000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                  toast.addEventListener('mouseenter', Swal.stopTimer)
+                  toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+              })
+              
+             await Toast.fire({
+                icon: 'error',
+                title: 'invalid input'
+              })
+              return;
+        }
         
         const token = sessionStorage.getItem('token');
-        const {data} = await axios.post('/transaction/create', {creatorUserName: creatorName, businessDescription: description, amount: amount, expiryDate: date}, {
+        const {data} = await axios.post('/transaction/create', {creatorUserName: creatorName, businessDescription: description, amount: amount, expiryDate: date, category: category, platform: platform}, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },

@@ -5,9 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="colorlib.com">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet" />
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <link href="assets/css/search.css" rel="stylesheet" />
   </head>
   <body>
+    <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                <nav class="main-nav">
+                  <!-- ***** Logo Start ***** -->
+                  <!-- ***** Logo End ***** -->
+                  <!-- ***** Menu Start ***** -->
+                  <ul class="nav">
+                    <li><a href="/" class="active">Home</a></li>
+                    <!-- <li><a href="business-dashboard.html">Dashboard</a></li> -->
+                    <li><a href="/search-transactions" class="active">Discover</a></li>
+                    <li><a href="/api-documentation" class="active">API</a></li>
+                    <li><a href="/login">Log in</a></li>
+                  </ul>      
+                  <a class='menu-trigger'>
+                      <span>Menu</span>
+                  </a>
+                  <!-- ***** Menu End ***** -->
+                </nav>
+              </div>
+          </div>
+      </div>
+    </header>
     <div class="s010">
       <form>
         <div class="inner-form">
@@ -22,7 +57,7 @@
             </div>
           </div>
           <div class="advance-search">
-            <div class="row">
+            <div class="rowe first">
               <div class="input-field">
                 <div class="input-select">
                   <select data-trigger="" name="choices-single-defaul">
@@ -51,7 +86,7 @@
                 </div>
               </div>
             </div>
-            <div class="row second">
+            <div class="rowe second">
               <div class="input-field">
                 <div class="input-select">
                   <select data-trigger="" name="choices-single-defaul">
@@ -83,13 +118,13 @@
                 </div>
               </div>
             </div>
-            <div class="row third">
+            <div class="rowe third">
               <div class="input-field">
                 <div class="result-count">
                   <span>108 </span>results</div>
                 <div class="group-btn">
                   <button class="btn-delete" id="delete">RESET</button>
-                  <button class="btn-search">SEARCH</button>
+                  <button class="btn-search"><a href="#results"></a>SEARCH</button>
                 </div>
               </div>
             </div>
@@ -97,7 +132,129 @@
         </div>
       </form>
     </div>
-    <script src="assets/js/extention/choices.js"></script>
+    <main class="content" id="results">
+      <div class="container-fluid p-0">
+
+        <div class="mb-3">
+          <h1 class="h3 d-inline align-middle">Results</h1>
+          <a class="badge bg-dark text-white ms-2" href="upgrade-to-pro.html">
+    108
+</a>
+        </div>
+
+          <div class="row">
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <img class="card-img-top" src="assets/images/banner-right-image.png" alt="Unsplash">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Yeat</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Contact</a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <img class="card-img-top" src="assets/images/banner-right-image.png" alt="Unsplash">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Fardeen</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+
+          <div class="col-12 col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="assets/images/banner-right-image.png" alt="Unsplash">
+
+              <div class="card-header">
+                <h5 class="card-title mb-0">Sohum</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="assets/images/banner-right-image.png" alt="Unsplash">
+
+              <div class="card-header">
+                <h5 class="card-title mb-0">Rithesh</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <img class="card-img-top" src="assets/images/banner-right-image.png" alt="Unsplash">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Yeat</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Contact</a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <img class="card-img-top" src="assets/images/banner-right-image.png" alt="Unsplash">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Fardeen</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+
+          <div class="col-12 col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="assets/images/banner-right-image.png" alt="Unsplash">
+
+              <div class="card-header">
+                <h5 class="card-title mb-0">Sohum</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="assets/images/banner-right-image.png" alt="Unsplash">
+
+              <div class="card-header">
+                <h5 class="card-title mb-0">Rithesh</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <script src="/assets/js/choices.js"></script>
     <script>
       const customSelects = document.querySelectorAll("select");
       const deleteBtn = document.getElementById('delete')
