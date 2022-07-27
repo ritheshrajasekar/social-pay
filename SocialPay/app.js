@@ -11,7 +11,7 @@ const {notFound} = require('./middlewares/notFound')
 const {errorHandlerMiddleware} = require('./middlewares/errorHandler')
 
 const {approveTransaction, creatorInvoice} = require('./controllers/transactionControllers')
-
+//
 app.use(express.json());
 app.use('/login', loginRouter)
 app.use('/creator', creatorRouter)
