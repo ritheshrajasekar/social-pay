@@ -1,19 +1,13 @@
 const table = document.querySelector('#transactionTable');
 const wallet = document.querySelector('#wallet');
-// const invested = document.querySelector('#invested');
 let approvalCounter = 0;
 let completeCounter = 0;
 let cancelledCounter = 0;
 let pendingCounter = 0;
 let amtInvested = 0;
-// {approvalCounter, completeCounter, cancelledCounter, pendingCounter};
 const start = async () => {
     try {
 
-        // document.querySelector('.logoutBtn').addEventListener('click', (e) => {
-        //     sessionStorage.removeItem('token');
-        // })
-        
         const token = sessionStorage.getItem('token');
         const {data} = await axios.get('/transaction/getAll', {
             headers: {
@@ -22,12 +16,9 @@ const start = async () => {
         })
         const transactions = data.transactions;
         
-        //var table = document.createElement('table');
-        //var tableBody = document.createElement('tbody');
         const newBusinesses = new Map();
         let uniqueBusinesses = 0;
         transactions.forEach(function(transaction) {
-            //console.log(transaction._id);
             let row = document.createElement('tr');
             let businessNamer = document.createElement('td')
             businessNamer.innerHTML = transaction.businessUserName;
@@ -53,14 +44,10 @@ const start = async () => {
             let status = document.createElement('td');
 
             let span = document.createElement('span')
-            //console.log(transaction)
-            //console.log(transaction.status);
             
-            //console.log("counter");
             if (transaction.status == 'AWAITING_APPROVAL') {
                 span.innerHTML = 'Awaiting Approval';
                 approvalCounter++;
-                //console.log(approvalCounter);
             }
             
             else if (transaction.status == 'COMPLETE') {
@@ -78,15 +65,12 @@ const start = async () => {
             
 
             
-            //span.innerHTML = transaction.status
-            //console.log('here3');
             span.classList.add('badge')
             if (transaction.status == 'COMPLETE') {span.classList.add('bg-success')}
             else if (transaction.status == 'CANCELLED') {span.classList.add('bg-danger')}
             else if (transaction.status == 'PENDING') {span.classList.add('bg-warning')}
             else if (transaction.status == 'AWAITING_APPROVAL') {span.classList.add('bg-secondary')}
             status.appendChild(span);
-            //console.log("here5")
             let amount = document.createElement('td');
             if (transaction.status != 'CANCELLED') {
                 amtInvested += transaction.amount;
@@ -97,10 +81,8 @@ const start = async () => {
             amount.innerHTML = `$${dollarUSLocale1.format(transaction.amount)}`;
             amount.classList.add('d-none')
             amount.classList.add('d-md-table-cell');
-            //console.log(transaction.id);
 
             let details = document.createElement('td')
-            //transaction/getDetails
             if (transaction.status == 'CANCELLED' || transaction.status == 'COMPLETE') {
                 details.innerHTML = `<a href="transaction?id=${transaction._id}`+`" class="more">View Details</a>`;
             } else if (transaction.status == 'AWAITING_APPROVAL') {
@@ -180,7 +162,6 @@ const start = async () => {
 
     
     } catch (e) {
-        console.log(e);
         const Toast = Swal.mixin({
             toast: true,
             position: 'top-end',
@@ -197,7 +178,7 @@ const start = async () => {
             icon: 'error',
             title: 'Please Login'
           })
-        // window.location.replace("/login");
+        window.location.replace("/login");
     }
 }
 

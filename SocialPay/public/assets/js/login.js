@@ -21,13 +21,10 @@ form.addEventListener('submit', async (e) => {
             sessionStorage.setItem('token', data.token)
             if (data.type == 'creator') {
                 window.location.replace('/creator');
-                console.log('go to creator page');
             } else {
                 window.location.replace("/business");
-                console.log('go to business page');
             }
         } catch(error) {
-            console.log(error)
             const Toast = Swal.mixin({
                 toast: true,
                 position: 'top-end',
@@ -49,6 +46,3 @@ form.addEventListener('submit', async (e) => {
 
 })
 
-// if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
-//     return false;
-// }

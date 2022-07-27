@@ -13,10 +13,7 @@ document.querySelector('.logoutBtn').addEventListener('click', (e) => {
 const start = async () => {
 
     try {
-        // document.querySelector('.logoutBtn').addEventListener('click', (e) => {
-        //     sessionStorage.removeItem('token');
-        // })
-        //console.log("here");
+
         const token = sessionStorage.getItem('token');
         const {data} = await axios.get('/transaction/getAll', {
             headers: {
@@ -25,12 +22,10 @@ const start = async () => {
         })
         const transactions = data.transactions;
         
-        //var table = document.createElement('table');
-        //var tableBody = document.createElement('tbody');
+
         const newCreators = new Map();
         let uniqueCreators = 0;
         transactions.forEach(function(transaction) {
-            //console.log(transaction._id);
             let row = document.createElement('tr');
             let creatorNamer = document.createElement('td')
             creatorNamer.innerHTML = transaction.creatorUserName;
@@ -54,14 +49,10 @@ const start = async () => {
             let status = document.createElement('td');
 
             let span = document.createElement('span')
-            //console.log(transaction)
-            //console.log(transaction.status);
             
-            //console.log("counter");
             if (transaction.status == 'AWAITING_APPROVAL') {
                 span.innerHTML = 'Awaiting Approval';
                 approvalCounter++;
-                //console.log(approvalCounter);
             }
             
             else if (transaction.status == 'COMPLETE') {
@@ -80,14 +71,12 @@ const start = async () => {
 
             
             //span.innerHTML = transaction.status
-            //console.log('here3');
             span.classList.add('badge')
             if (transaction.status == 'COMPLETE') {span.classList.add('bg-success')}
             else if (transaction.status == 'CANCELLED') {span.classList.add('bg-danger')}
             else if (transaction.status == 'PENDING') {span.classList.add('bg-warning')}
             else if (transaction.status == 'AWAITING_APPROVAL') {span.classList.add('bg-secondary')}
             status.appendChild(span);
-            //console.log("here5")
             let amount = document.createElement('td');
             if (transaction.status != 'CANCELLED') {
                 amtInvested += transaction.amount;
@@ -98,7 +87,6 @@ const start = async () => {
             amount.innerHTML = `$${dollarUSLocale1.format(transaction.amount)}`;
             amount.classList.add('d-none')
             amount.classList.add('d-md-table-cell');
-            //console.log(transaction.id);
 
             let details = document.createElement('td')
             //transaction/getDetails
@@ -169,33 +157,6 @@ const start = async () => {
                 cutoutPercentage: 75
             }
         });
-        // document.addEventListener("DOMContentLoaded", function() {
-            // Pie chart
-        //     new Chart(document.getElementById("chartjs-dashboard-pie"), {
-        //         type: "pie",
-        //         data: {
-        //             labels: ["Complete",  "Pending", "Awaiting Approval", "Cancelled"],
-        //             datasets: [{
-        //                 data: [5, 4, 3, 2],
-        //                 backgroundColor: [
-        //                     window.theme.success,
-        //                     window.theme.warning,
-        //                     window.theme.gray,
-        //                     window.theme.danger
-        //                 ],
-        //                 borderWidth: 5
-        //             }]
-        //         },
-        //         options: {
-        //             responsive: !window.MSInputMethodContext,
-        //             maintainAspectRatio: false,
-        //             legend: {
-        //                 display: false
-        //             },
-        //             cutoutPercentage: 75
-        //         }
-        //     });
-        // });
     
     } catch (e) {
         const Toast = Swal.mixin({

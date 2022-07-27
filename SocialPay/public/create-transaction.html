@@ -56,15 +56,15 @@ https://templatemo.com/tm-573-eduwell
             <div class="col-12">
               <nav class="main-nav">
                 <!-- ***** Logo Start ***** -->
-                <a href="index.html" class="logo">
+                <a href="/" class="logo">
                   <img src="assets/images/templatemo-eduwell.png" style="height: 50px; width:223px" alt="NCR SOCIALPAY">
                 </a>
                 <!-- ***** Logo End ***** -->
                 <!-- ***** Menu Start ***** -->
                 <ul class="nav">
                   <li><a href="/" class="active">Home</a></li>
-                  <li><a href="/business">Dashboard</a></li>
-                  <li><a href="/login" class="logoutBtn">Logout</a></li>
+                  <li><a href="/business" class="active">Dashboard</a></li>
+                  <li><a href="/login" class="logoutBtn active">Logout</a></li>
                 </ul>      
                 <a class='menu-trigger'>
                     <span>Menu</span>
@@ -106,7 +106,6 @@ https://templatemo.com/tm-573-eduwell
           
                   <div class="wrap-input1 validate-input" data-validate = "Date is required" id="dateNewTransactionError">
                     <input class="input1" type="text" name="date" placeholder="Expiry Date" id="dateNewTransaction">
-                    
                   </div> 
           
                   <div class="wrap-input1 validate-input" data-validate = "Description is required" id="descriptionNewTransactionError">
@@ -114,8 +113,8 @@ https://templatemo.com/tm-573-eduwell
                     <span class="shadow-input1"></span>
                   </div>
           
-                  <div class="card-body">
-                    <select id="categorySelect"class="form-select mb-3">
+                  <div class="wrap-input1 validate-input">
+                    <select id="categorySelect" class="form-select mb-3">
                       <option selected value="DEFAULT">Select category of asset</option>
                       <option value="SPORT">Sport</option>
                       <option value="GAME">Game</option>
@@ -124,8 +123,8 @@ https://templatemo.com/tm-573-eduwell
                       <option value="TECH">Tech</option>
                     </select>
 
-                    <div class="card-body">
-                      <select id="platformSelect"class="form-select mb-3">
+                    <div class="validate-input">
+                      <select id="platformSelect" class="form-select mb-3">
                         <option selected value="DEFAULT">Select platform of asset</option>
                         <option value="YOUTUBE">Youtube</option>
                         <option value="TWITCH">Twitch</option>

@@ -44,7 +44,6 @@ document.querySelector('.validate-form').addEventListener('submit', async (e) =>
 
     try {
         if (valid == false) {
-            console.log("here");
             return;
         }
 
@@ -53,11 +52,7 @@ document.querySelector('.validate-form').addEventListener('submit', async (e) =>
                 Authorization: `Bearer ${sessionStorage.getItem('token')}`,
             }
         })
-        console.log(businessData)
-        console.log(businessData.data.wallet)
-        console.log(Number(businessData.data.wallet) - Number(amount))
         if (Number(businessData.data.wallet) - Number(amount) < 0) {
-            console.log('too high');
             amountError.setAttribute('data-validate', "Required amount not in wallet");
             amountError.classList.add('alert-validate');
             return;
@@ -111,7 +106,6 @@ document.querySelector('.validate-form').addEventListener('submit', async (e) =>
         
 
     } catch (error) {
-        //show alert that creator doesn't exist
         creatorNameError.setAttribute('data-validate', "Creator does not exist");
         creatorNameError.classList.add('alert-validate');
     }

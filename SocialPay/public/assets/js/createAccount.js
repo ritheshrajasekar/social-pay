@@ -1,8 +1,6 @@
 
 
-console.log("running");
 const toggleLabel = document.querySelector('#flexSwitchLabel');
-console.log(toggleLabel);
 const toggleType = document.querySelector('#flexSwitchCheckDefault');
 toggleType.addEventListener('click', function(event) {
 
@@ -42,7 +40,6 @@ form.addEventListener('submit', async (e) => {
             }
             window.location.replace("/login");
         } catch(error) {
-            console.log(error);
             const usernameError = document.querySelector('#createUsernameError')
             usernameError.setAttribute('data-validate', "username already exists");
             usernameError.classList.add('alert-validate');
@@ -51,6 +48,3 @@ form.addEventListener('submit', async (e) => {
 
 })
 
-// if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
-//     return false;
-// }
