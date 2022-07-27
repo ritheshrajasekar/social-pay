@@ -29,7 +29,7 @@ app.use(errorHandlerMiddleware)
 
 
 const PORT = process.env.PORT || 8080;
-const URL = `mongodb+srv://user1:helloworld123$@socialpaycluster.fsdxzis.mongodb.net/socialPayDatabase?retryWrites=true&w=majority`
+const URL = process.env.URL
 const startApp = async () => {
     try {
       await connectDatabase(URL);
