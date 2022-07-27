@@ -94,5 +94,13 @@ const creatorInvoice = async (req, res) => {
   res.sendFile(path.join(__dirname, '../public/creator-invoice.html'));
 }
 
+const searchTransactions = async (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/search-transactions.html'));
+}
 
-module.exports = {createTransaction, updateTransaction, getAllTransactions, getTransaction, transactionBusinessDetails, approveTransaction, creatorInvoice}
+const apiDocumentation = async (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/api-documentation.html'));
+}
+
+
+module.exports = {createTransaction, updateTransaction, getAllTransactions, getTransaction, transactionBusinessDetails, approveTransaction, creatorInvoice, searchTransactions, apiDocumentation}

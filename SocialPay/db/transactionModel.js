@@ -53,6 +53,16 @@ const transactionSchema = new mongoose.Schema({
     required: [false],
     default: null,
   },
+  category: {
+    type: String,
+    enum: ['SPORT', 'BEAUTY', 'GAME', 'TECH', 'MUSIC'],
+    default: null,
+  },
+  platform: {
+    type: String,
+    enum: ['YOUTUBE', 'TWITCH', 'INSTAGRAM', 'TIKTOK', 'FACEBOOK'],
+    default: null,
+  },
 }, { strict: 'throw' })
 
 

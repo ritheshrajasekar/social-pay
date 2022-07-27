@@ -168,11 +168,12 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #9053c7;
+  /* background: #9053c7;
   background: -webkit-linear-gradient(-135deg, #329D9C, #CFF4D2);
   background: -o-linear-gradient(-135deg, #329D9C, #CFF4D2);
   background: -moz-linear-gradient(-135deg, #329D9C, #CFF4D2);
-  background: linear-gradient(-135deg, #329D9C, #CFF4D2);
+  background: linear-gradient(-135deg, #329D9C, #CFF4D2); */
+  background: white
 }
 
 .wrap-login100 {
@@ -12449,6 +12450,7 @@ span.flatpickr-weekday {
   top: 0;
   width: 260px;
 }
+
 /*# sourceMappingURL=app.css.map*/
 
 

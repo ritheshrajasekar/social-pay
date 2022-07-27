@@ -10,7 +10,7 @@ const {loginRouter} = require('./routes/loginRoute')
 const {notFound} = require('./middlewares/notFound')
 const {errorHandlerMiddleware} = require('./middlewares/errorHandler')
 
-const {approveTransaction, creatorInvoice} = require('./controllers/transactionControllers')
+const {approveTransaction, creatorInvoice, searchTransactions, apiDocumentation} = require('./controllers/transactionControllers')
 //
 app.use(express.json());
 app.use('/login', loginRouter)
@@ -19,6 +19,8 @@ app.use('/transaction', transactionRouter)
 app.use('/business', businessRouter)
 app.use('/approve-transaction', approveTransaction)
 app.use('/creator-invoice', creatorInvoice)
+app.use('/search-transactions', searchTransactions)
+app.use('/api-documentation', apiDocumentation)
 
 
 app.use(notFound)
