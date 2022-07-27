@@ -27,6 +27,7 @@ form.addEventListener('submit', async (e) => {
                 console.log('go to business page');
             }
         } catch(error) {
+            console.log(error)
             const Toast = Swal.mixin({
                 toast: true,
                 position: 'top-end',
