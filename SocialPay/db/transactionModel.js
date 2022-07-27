@@ -55,8 +55,8 @@ const transactionSchema = new mongoose.Schema({
   },
   category: {
     type: String,
-    enum: ['SPORT', 'BEAUTY', 'GAME', 'TECH', 'MUSIC'],
-    default: null,
+    enum: ['SPORT', 'LIFESTYLE', 'GAME', 'TECH', 'MUSIC'],
+    default: null, 
   },
   platform: {
     type: String,

@@ -57,7 +57,6 @@ document.querySelector('.validate-form').addEventListener('submit', async (e) =>
             amountError.classList.add('alert-validate');
             return;
         }
-        
         const category = document.querySelector('#categorySelect').value
         const platform = document.querySelector('#platformSelect').value
         if (category == 'DEFAULT' || platform == 'DEFAULT') {
